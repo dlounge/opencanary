@@ -13,7 +13,7 @@ LABEL maintainer="somebody@universe.com" \
       org.label-schema.maintainer=dlounge
 
 RUN rm /bin/sh && ln -s /bin/bash /bin/sh 
-RUN apt-get update && apt-get -y dist-upgrade \
+RUN apt-get update && apt-get -y dist-upgrade && \
     apt-get install -y --no-install-recommends sudo git build-essential tcpdump nano iproute2 libpcap-dev libffi-dev \
     libssl-dev python3-dev python3-setuptools python3-pip python3-virtualenv iptables inetutils-ping netcat \
 	samba samba-common-bin cups && \
