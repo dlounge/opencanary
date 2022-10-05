@@ -1,5 +1,5 @@
 # use to create a swarm template in Portainer
-version: '0.7.1'
+version: '3.4'
 
 x-default-opts: 
   &default-opts
@@ -15,7 +15,7 @@ x-environment: &common-vars
 
 services:
   opencanary:
-    image: dlounge/opencanary:latest
+    image: dlounge/opencanary:0.7.1
     hostname: officerepl
     <<: *default-opts    
     environment:
